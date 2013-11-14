@@ -3,13 +3,13 @@
 	require_once('php-sdk/facebook.php');
 	$facebook = new Facebook(
 		array(
-			'appId' => '721823137830217', 
-			'secret' => 'd46d12ee0ee635d6fc3c64ab0e7016d7',
+			'appId' => '*******', 
+			'secret' => '******',
 		)
 	);
 	$user = $facebook->getUser();
 	$accessToken = $facebook->getAccessToken();
-	$con = mysqli_connect("localhost","root","raspberrypie","Users");
+	$con = mysqli_connect("localhost","root","*****","Users");
 	if (!mysqli_connect_errno($con)) {
 	   $result = mysql_query($con,"SELECT * FROM AccessTokens WHERE userID = '$user'");
 	   if (mysql_num_rows($result) == 0) {
